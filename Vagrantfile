@@ -9,7 +9,7 @@ VAGRANTFILE_API_VERSION = "2"
   # Provision file for setting up the environment
   config.vm.provision :shell, :path => "provision.sh"
   # Private IP for testing in browser
-  config.vm.network :private_network, ip: "23.23.23.09"
+  config.vm.network :private_network, ip: "23.23.23.10"
   # Used for xdebug in browser
   config.vm.network :forwarded_port, host:9001, guest:9001
 end
