@@ -1,4 +1,5 @@
  # /bin/bash
+# Updates Ubuntu
 sudo apt-get update
 # Server and Languages
 sudo apt-get install -y apache2
@@ -19,3 +20,4 @@ git clone https://github.com/gmarik/vundle.git /home/vagrant/ .vim/bundle/vundle
 cp /vagrant/.vimrc /home/vagrant
 sudo chown vagrant /home/vagrant/.vim
 sudo chown vagrant /home/vagrant/.vimrc
+# git submodule add https://github.com/croaker/mustang-vim.git /home/vagrant .vim/
