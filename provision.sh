@@ -1,24 +1,60 @@
- # /bin/bash
+# /bin/bash
 # Updates Ubuntu
 sudo apt-get update
+echo " ############################################## UPDATED"
+# Build Essentials
+sudo apt-get install -y build-essential
+echo " ############################################## BUILD ESSENTIALS"
 # Server and Languages
 sudo apt-get install -y apache2
+echo " ############################################## APACHE SERVER"
 sudo apt-get install -y php5
+echo " ############################################## PHP5"
 sudo apt-get install -y php-pear # xdebug needs this to install via pecl
-# Zipping and URL Utilities
-sudo apt-get install -y zip
-sudo apt-get install -y bzip2
-sudo apt-get install -y curl
+echo " ############################################## PHP PEAR"
+##sudo apt-get install -y php5-dev
+### Zipping and URL Utilities
+##sudo apt-get install -y zip
+##sudo apt-get install -y bzip2
+##sudo apt-get install -y curl
 sudo apt-get install -y git
-# Debugger
+echo " ############################################## GIT"
+# Vdebug
+sudo cp /vagrant/xdebug.ini /etc/php5/conf.d
+echo " ############################################## COPY XDEBUG.INI"
 sudo pecl install xdebug
-# Server Configs
-sudo cp /vagrant/xdebug.ini /etc/php5/apache2/conf.d
-sudo /etc/init.d/apache2 restart
+echo " ############################################## INSTALL XDEBUG.SO"
 # Vim Setup And Config
 sudo apt-get install -y vim
-git clone https://github.com/gmarik/vundle.git /home/vagrant/.vim/bundle/vundle
-cp /vagrant/.vimrc /home/vagrant
-sudo chown vagrant -R /home/vagrant/.vim
+echo " ############################################## INSTALL VIM"
+	if [ ! -d /home/vagrant/.vim/bundle/vundle ]
+		then
+		git clone https://github.com/gmarik/vundle.git /home/vagrant/.vim/bundle/vundle
+	fi
+# Vim Plugins
+echo " ############################################## INSTALL VIM - VUNDLE"
+	if [ ! -d /home/vagrant/.vim/bundle/vdebug ]
+		then
+		git clone https://github.com/vim-scripts/Vdebug.git /home/vagrant/.vim/bundle/vdebug
+	# copy my version of vdebug with custom ip address and custom ports
+	sudo cp /vagrant/vdebug.vim /home/vagrant/.vim/bundle/vdebug/plugin/
+	fi
+echo " ############################################## INSTALL VIM - VDEBUG"
+# Vim Settings
+	if [ ! -d /home/vagrant/.vim/colors ]
+		then
+		mkdir /home/vagrant/.vim/colors
+		wget https://raw.github.com/croaker/mustang-vim/master/colors/mustang.vim 
+		mv mustang.vim /home/vagrant/.vim/colors
+	fi
+echo " ############################################## INSTALL MUSTANG COLOR SCHEME"
+sudo cp /vagrant/.vimrc /home/vagrant
 sudo chown vagrant /home/vagrant/.vimrc
-# git submodule add https://github.com/croaker/mustang-vim.git /home/vagrant .vim/
+sudo chown vagrant -R /home/vagrant/.vim
+echo " ############################################## COPY .VIMRC - SET PERMISSIONS FOR .VIM & .VIMRC"
+# Debugger
+sudo /etc/init.d/apache2 restart
+echo " ############################################## RESTARTED APACHE SERVER"
+# vim +BundleInstall +qall
+echo " ############################################## INITALIZED VIM - VUNDLE PLUGINS"
+vim +BundleInstall +aall!
