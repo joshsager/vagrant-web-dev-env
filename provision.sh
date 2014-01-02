@@ -27,11 +27,11 @@ echo " ############################################## INSTALL XDEBUG.SO"
 # Vim Setup And Config
 sudo apt-get install -y vim
 echo " ############################################## INSTALL VIM"
+# Vim Plugins
 	if [ ! -d /home/vagrant/.vim/bundle/vundle ]
 		then
 		git clone https://github.com/gmarik/vundle.git /home/vagrant/.vim/bundle/vundle
 	fi
-# Vim Plugins
 echo " ############################################## INSTALL VIM - VUNDLE"
 	if [ ! -d /home/vagrant/.vim/bundle/vdebug ]
 		then
@@ -40,6 +40,16 @@ echo " ############################################## INSTALL VIM - VUNDLE"
 	sudo cp /vagrant/vdebug.vim /home/vagrant/.vim/bundle/vdebug/plugin/
 	fi
 echo " ############################################## INSTALL VIM - VDEBUG"
+	if [ ! -d /home/vagrant/.vim/bundle/vim-powerline ]
+	then
+	git clone https://github.com/Lokaltog/vim-powerline.git /home/vagrant/.vim/bundle/vim-powerline
+	fi
+echo " ############################################## INSTALL VIM - POWERLINE"
+	if [ ! -d /home/vagrant/.vim/bundle/vim-fugitive ]
+	then
+	git clone https://github.com/tpop/vim-fugitive.git /home/vagrant/.vim/bundle/vim-powerline
+	fi
+echo " ############################################## INSTALL VIM - FUGITIVE"
 # Vim Settings
 	if [ ! -d /home/vagrant/.vim/colors ]
 		then
@@ -57,4 +67,6 @@ sudo /etc/init.d/apache2 restart
 echo " ############################################## RESTARTED APACHE SERVER"
 # vim +BundleInstall +qall
 echo " ############################################## INITALIZED VIM - VUNDLE PLUGINS"
-vim +BundleInstall +aall!
+# Set Git Color to be True
+git config --global color.ui true
+# There has to be a better way than this -- too many errors at the command line vim +BundleInstall +aall!
