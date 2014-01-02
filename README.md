@@ -43,10 +43,12 @@ Baseline Web Development Environment: v1.0.2
 <h2>Install</h2>
 <p><a href="http://www.vagrantup.com/">Vagrant</a> is require to create the development environment.</p>
 <ol>
-	<li>Clone this repo and type <code>vagrant up</code></li>
-	<li>When the vitural machine has been created type <code>vagrant ssh</code></li>
-	<li>Open vim <code>vim .</code></li>
-	<li>Install vim plugins <code>:BundleInstall</code></li>
+	<li>Clone this repo and type <code>vagrant up</code> in terminal.</li>
+	<li>When the vitural machine has been created type <code>vagrant ssh</code> in terminal. This will log you into the virtual machine's cammand line.</li>
+	<li>Open vim by typing <code>vim .</code> in terminal.</li>
+	<li>Install vim plugins by typing <code>:BundleInstall</code> in vim.</li>
+	<li>Create web a project folder with a GEMFile for things like compass, breakpoint etc.</li>
+	<li>Type <code>install bundle</code> in terminal.</li>
 	<li>Code Code Code Code</li>
 </ol>
 <p>Feel free to fork and modify to your own settings</p>
