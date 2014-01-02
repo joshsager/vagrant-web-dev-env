@@ -1,7 +1,7 @@
 web-dev
 =======
 
-Baseline Web Development Environment: v1.0.0
+Baseline Web Development Environment: v1.0.2
 <h2>Features</h2>
 <h3>Vagrant</h3>
 <ul>
@@ -11,11 +11,14 @@ Baseline Web Development Environment: v1.0.0
 	<li>Creates a custom ip and sets ports for debugging</li>
 	<li>Installs Build Essentials</li>
 </ul>
-<h3>Server and Languages</h3>
+<h3>Server, Languages and Environments</h3>
 <ul>
 	<li>Apache</li>
 	<li>php5</li>
 	<li>php pear</li>
+	<li>rvm</li>
+	<li>ruby 1.9.2</li>
+	<li>gem bundler</li>
 </ul>
 <h3>Software and Utilities</h3>
 <ul>
@@ -44,6 +47,7 @@ Baseline Web Development Environment: v1.0.0
 	<li>When the vitural machine has been created type <code>vagrant ssh</code></li>
 	<li>Open vim <code>vim .</code></li>
 	<li>Install vim plugins <code>:BundleInstall</code></li>
+	<li>Code Code Code Code</li>
 </ol>
 <p>Feel free to fork and modify to your own settings</p>
 

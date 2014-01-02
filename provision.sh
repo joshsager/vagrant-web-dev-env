@@ -12,6 +12,14 @@
 	echo " ############################################## PHP5"
 	sudo apt-get install -y php-pear # xdebug needs this to install via pecl
 	echo " ############################################## PHP PEAR"
+	sudo apt-get install -y ruby-rvm
+	echo " ############################################## RVM"
+	sudo rvm install ruby-1.9.2-head
+	echo " ############################################## INSTALL RUBY TO 1.9.2"
+	sudo rvm use ruby-1.9.2-head --default
+	echo " ############################################## SET RUBY TO 1.9.2"
+	sudo gem install bundler
+	echo " ############################################## GEM - BUNDLER"
 # Software and Utilities
 	sudo apt-get install -y tmux  
 	echo " ############################################## TMUX"
