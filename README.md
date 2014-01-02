@@ -35,8 +35,15 @@ Baseline Web Development Environment: v1.0.0
 	<li>Powerline</li>
 	<li>Fugitive</li>
 	<li>Colorscheme: Mustang</li>
-	<li>Custom .vimrc</li>
+	<li>Copies over my custom .vimrc</li>
 </ul>
 <h2>Install</h2>
 <p><a href="http://www.vagrantup.com/">Vagrant</a> is require to create the development environment.</p>
-<p>Clone this repo and type <code>vagrant up</code>
+<ol>
+	<li>Clone this repo and type <code>vagrant up</code></li>
+	<li>When the vitural machine has been created type <code>vagrant ssh</code></li>
+	<li>Open vim <code>vim .</code></li>
+	<li>Install vim plugins <code>:BundleInstall</code></li>
+</ol>
+<p>Feel free to fork and modify to your own settings</p>
+
