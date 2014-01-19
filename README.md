@@ -22,7 +22,7 @@ Baseline Web Development Environment: v1.0.2
 </ul>
 <h3>Software and Utilities</h3>
 <ul>
-	<li>Git and sents color.ui to true</li>
+	<li>Git and sets color.ui to true</li>
 	<li>Tmux</li>
 </ul>
 <h3>Debugging Server Config</h3>
