@@ -89,4 +89,4 @@
 	echo " ############################################## RESTARTED APACHE SERVER"
 # Set Git Color to be True
 	git config --global color.ui true
-	# There has to be a better way than this -- too many errors at the command line vim +BundleInstall +aall!
+	sudo apt-get update

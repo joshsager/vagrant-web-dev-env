@@ -15,8 +15,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :private_network, ip: "23.23.23.10"
   # Used for xdebug in browser
   config.vm.network :forwarded_port, host: 9001, guest: 9001
-  # Sync web Dev folder
-  config.vm.synced_folder "src/", "/var/www"
+  # Sync source code with root of web server
+  config.vm.synced_folder "../", "/var/www"
   # Start bash in a non-login shell but still source the profile -- https://github.com/mitchellh/vagrant/issues/1673#issuecomment-28288042
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 end
