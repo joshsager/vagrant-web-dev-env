@@ -14,6 +14,15 @@
 	echo " ############################################## PHP PEAR"
 	sudo apt-get install -y ruby-rvm
 	echo " ############################################## RVM"
+	sudo apt-get install -y mysql-server
+	echo " ############################################## INSTALL MYSQL SERVER 
+	sudo apt-get install -y mysql-client
+	echo " ############################################## INSTALL MYSQL CLIENT 
+	sudo apt-get install -y php5-mysql
+	echo " ############################################## INSTALL PHP5 MYSQL
+	sudo mysqladmin -u root -h localhost password 'root'
+	sudo mysqladmin -u root -h 23.23.23.10 password 'root'
+	echo " ############################################## SETUP MYSQL
 	sudo rvm install ruby-1.9.2-head
 	echo " ############################################## INSTALL RUBY TO 1.9.2"
 	sudo rvm use ruby-1.9.2-head --default
@@ -25,9 +34,11 @@
 	echo " ############################################## TMUX"
 	##sudo apt-get install -y php5-dev
 	### Zipping and URL Utilities
-	##sudo apt-get install -y zip
+	sudo apt-get install -y zip
+	sudo apt-get install -y unzip
 	##sudo apt-get install -y bzip2
-	##sudo apt-get install -y curl
+	sudo apt-get install -y curl
+	sudo apt-get install -y php5-curl
 	sudo apt-get install -y git
 	echo " ############################################## GIT"
 # Vdebug
